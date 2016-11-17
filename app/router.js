@@ -7,6 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('timelines', function() {
+    this.route('new');
+  });
+  this.route('users', function() {
+    this.route('new');
+    this.route('show', { path: '/users/:user_id' });
+  });
 });
 
 export default Router;

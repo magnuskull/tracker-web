@@ -1,0 +1,8 @@
+{{#each model as |timeline|}}
+<li>{{timeline.name}}</li>
+{{else}}
+No timelines
+{{/each}}
+<div>
+  {{link-to 'New timeline' 'timelines.new'}}
+</div>
