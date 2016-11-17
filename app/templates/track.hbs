@@ -1,0 +1,11 @@
+<label>What to track</label>
+{{#x-select value=selectedTimelineId action="selectTimeline" as |xs|}}
+  <option>Select...</option>
+  {{#each model.timelines as |timeline|}}
+    {{#xs.option value=timeline.id}}{{timeline.name}}{{/xs.option}}
+  {{/each}}
+{{/x-select}}
+
+<label>Value</label>
+{{input value=model.entry.value min=1 max=5 type='number'}}
+<button {{action 'saveEntry'}}>Track!</button>

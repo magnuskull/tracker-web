@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('new');
     this.route('show', { path: '/users/:user_id' });
   });
+  this.route('track');
 });
 
 export default Router;
