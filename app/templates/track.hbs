@@ -2,7 +2,7 @@
 {{#x-select value=selectedTimelineId action="selectTimeline" as |xs|}}
   <option>Select...</option>
   {{#each model.timelines as |timeline|}}
-    {{#xs.option value=timeline.id}}{{timeline.name}}{{/xs.option}}
+    {{#xs.option value=timeline.id}}{{timeline.question}}{{/xs.option}}
   {{/each}}
 {{/x-select}}
 

@@ -1,6 +1,9 @@
 <h3>New timeline</h3>
 <form>
+  <label>Name</label>
   {{input value=model.name}}
+  <label>Question</label>
+  {{input value=model.question}}
   <button {{action 'saveTimeline'}} type="submit" class="btn btn-default">Save</button>
   <button {{action 'cancel'}} class="btn btn-default">Cancel</button>
 </form>
