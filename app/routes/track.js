@@ -14,5 +14,14 @@ export default Ember.Route.extend({
     this._super(controller, model);
 
     controller.set('selectedTimelineId', null);
+  },
+
+  resetController(controller, isExiting) {
+    if(isExiting) {
+      let model = controller.get('model.entry');
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
+    }
   }
 });

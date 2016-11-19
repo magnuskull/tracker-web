@@ -9,5 +9,14 @@ export default Ember.Route.extend({
     });
 
     return timeline;
+  },
+
+  resetController(controller, isExiting) {
+    if(isExiting) {
+      let model = controller.get('model');
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
+    }
   }
 });
