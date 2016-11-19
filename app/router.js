@@ -9,10 +9,13 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('timelines', function() {
     this.route('new');
+    this.route('show', { path: ':timeline_id' }, function() {
+      this.route('entries', { resetNamespace: true }, function() {});
+    });
   });
   this.route('users', function() {
     this.route('new');
-    this.route('show', { path: '/users/:user_id' });
+    this.route('show', { path: ':user_id' });
   });
   this.route('track');
 });

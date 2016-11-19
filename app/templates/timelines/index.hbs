@@ -1,5 +1,5 @@
 {{#each model as |timeline|}}
-<li>{{timeline.name}}</li>
+<li>{{link-to timeline.name 'entries' timeline}} <button {{action 'deleteTimeline' timeline}}>Delete</button></li>
 {{else}}
 No timelines
 {{/each}}
